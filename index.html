@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>weatherTunes</title>
+  <meta name="description" content="weather app">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,500|Signika:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/weather-icons.min.css">
+  <link rel="icon" type="image/ico" href="img/favicon.ico">
+  <link rel="icon" sizes="120x120" href="img/wTunes-blue_120.png">
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <section role="banner">
+        <div><img src="./img/wTunes-white_60.png" alt="weather tunes logo">
+          <h1><span class="yellow">Weather</span> <span class="sky">Tunes</span></h1>
+        </div>
+        <p>Tunes to match the weather in your location</p>
+      </section>
+    </header>
+
+    <section role="main">
+      <h2>Get Your Weather Related Tune</h2>
+
+
+      <section id="results">
+
+        <section class="forecast-main temp-value" id="forecast-low">
+          <p class="info-content">Lowest Temp<span class="current-temp"></span></p>
+        </section>
+
+        <section class="forecast-main" id="forecast-section">
+          <h2 class="info-content uppercase">Your city: <span id="your-city"></span></h2>
+          <p class="info-content">Temperature: <span class="current-temp"></span></p>
+          <p class="info-content">The forecast for your city is: <span id="forecast-value"></span></p>
+        </section>
+
+        <section class="forecast-main temp-value" id="forecast-high">
+          <p class="info-content">Highest Temp<span class="current-temp"></span></p>
+        </section>
+
+        <section id="music-section">
+          <iframe id="video" src=""></iframe>
+        </section>
+
+      </section>
+
+
+      <form id="get-weather">
+        <div class="fieldset">
+          <label for="your-location">Your Location:</label>
+          <input id="your-location" type="text" name="location" value="" placeholder="enter your location..." pattern="[a-zA-Z\s]+">
+          <p class="hidden"></p>
+          <input type="submit" name="submit" value="Submit">
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <script type="text/javascript" src="api-keys/our-keys.js"></script>
+  <script type="text/javascript" src="js/logic.js"></script>
+  <script type="text/javascript" src="js/dom.js"></script>
+
+</body>
+
+</html>
